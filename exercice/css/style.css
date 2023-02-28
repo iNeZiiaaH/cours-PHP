@@ -1,0 +1,11 @@
+#zone1{
+    border-radius: 10px;
+    border: solid 2px black;
+    width: 200px;
+    box-shadow:  0 0 10px black;
+    transition: all 1s;
+}
+#zone1:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
