@@ -13,14 +13,14 @@ function arrondi($nombre) {
     }
 };
 
-var_dump(arrondi(0.234)) . "<br />"; 
-var_dump(arrondi(1.56)) . "<br />"; 
-var_dump(arrondi(1.27)) . "<br />"; 
-var_dump(arrondi(1.12)) . "<br />"; 
-var_dump(arrondi(1.25)) . "<br />"; 
-var_dump(arrondi(3.89)) . "<br />"; 
-var_dump(arrondi(7.23)) . "<br />"; 
-var_dump(arrondi(8.7) ) . "<br />"; 
-var_dump(arrondi(2.45)) . "<br />"; 
-var_dump(arrondi(5.8)) . "<br />"; 
-var_dump(arrondi(10.2)) . "<br />"; 
+var_dump(arrondi(0.234)); 
+var_dump(arrondi(1.56)); 
+var_dump(arrondi(1.27)); 
+var_dump(arrondi(1.12)); 
+var_dump(arrondi(1.25)); 
+var_dump(arrondi(3.89)); 
+var_dump(arrondi(7.23)); 
+var_dump(arrondi(8.7)); 
+var_dump(arrondi(2.45)); 
+var_dump(arrondi(5.8)); 
+var_dump(arrondi(10.2)); 
