@@ -11,7 +11,7 @@ function arrondi($nombre) {
     } else {
         return $entier + 0.5;
     }
-    }
+};
 
 echo arrondi(0.234) . "<br />"; 
 echo arrondi(1.56) . "<br />"; 
@@ -24,4 +24,3 @@ echo arrondi(8.7) . "<br />";
 echo arrondi(2.45) . "<br />"; 
 echo arrondi(5.8) . "<br />"; 
 echo arrondi(10.2). "<br />"; 
-?>
