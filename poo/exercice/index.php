@@ -4,26 +4,42 @@ class User {
 
     private string $firstName;
     private string $lastName;
-    private int|DateTime $birthDate;
+    private int|DateTime $age;
     private bool $banned;
 
-    public function __construct(string $firstName, string $lastName, int|DateTime $birthDate) {
+    public function __construct(string $firstName, string $lastName, int|DateTime $age) {
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->birthDate = $birthDate;
+        $this->age = $age;
         $this->banned = false;
     }
+    public function getfirstName(): string 
+    {
+        return $this->firstName;
+    }
+    public function setfirstName(string $firstName): void 
+    {
+        $this->firstName;
+    }
+    public function getlastName(): string 
+    {
+        return $this->lastName;
+    }
+    public function setlastName(string $lastName): void 
+    {
+        $this->lastName;
+    }
 
-    public function fullName(): string {
+    public function getFullName(): string {
         return $this->firstName . ' ' . $this->lastName;
     }
 
     public function hasLegalAge(): bool {
-        if (is_int($this->birthDate)) {
-            $age = $this->birthDate;
+        if (is_int($this->age)) {
+            $age = $this->age;
         } else {
             $now = new DateTime();
-            $age = $this->birthDate->diff($now)->y;
+            $age = $this->age->diff($now)->y;
         }
         return $age >= 18;
     }
@@ -39,7 +55,7 @@ class User {
 }
 
 function ban(User $user): void {
-    $user->ban();
+    $user->ban(true);
 }
 
 $users = [
@@ -52,7 +68,8 @@ $users = [
 ];
 
 foreach ($users as $user) {
-    echo $user->fullName() . ' est ' . ($user->hasLegalAge() ? 'majeur' : 'mineur') . PHP_EOL ?>  <br /> <?php ;
+    echo $user->getFullName() . ' est ' . ($user->hasLegalAge() ? 'majeur' : 'mineur') . PHP_EOL ?>  <br /> <?php ;
 }
-
+var_dump($users)
 ?>
+
